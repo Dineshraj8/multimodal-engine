@@ -1,46 +1,25 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+import * as React from "react";
+import Box from "@mui/material/Box";
 
-
-function valuetext(value) {
-  return `${value}%`;
-}
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 export default function DiscreteSliderMarks(props) {
-
-
-    const marks = [
-        {
-          value: 0,
-          label: "sad",
-        },
-        
-        {
-          value: 100,
-          label: "Happy",
-        },
-      ];
-
   return (
-    <Box sx={{ 
-      width: 200,
-      alignItems:"center",
-      margin:"auto"
-       }}>
-         {props.Label}
-      <Slider
-        aria-label="default"
-        defaultValue={20}
-        getAriaValueText={valuetext}
-        step={10}
-        valueLabelDisplay="auto"
-        marks={marks}
-        width="50px"
-        color={props.color}
+    <Box
+      sx={{
+        width: 200,
+        alignItems: "center",
+        margin: "auto",
+        FontColor: "Black",
+        textStyle: "Bold"
+      }}
+    >
+      {props.Label}
+      <ProgressBar
+        variant={props.color}
+        now={props.value}
+        
       />
     </Box>
-
-
   );
 }

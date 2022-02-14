@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/pages/dashboard.css"],"names":[],"mappings":"AAAA,KACI,eACF","file":"main.c52dbe63.chunk.css","sourcesContent":["body {\r\n    overflow: hidden; /* Hide scrollbars */\r\n  }"]}
