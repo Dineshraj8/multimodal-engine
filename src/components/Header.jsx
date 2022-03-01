@@ -4,9 +4,17 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+import { useHistory } from "react-router-dom";
 
 export default function ButtonAppBar() {
+
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `/`; 
+    history.push(path);
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -23,7 +31,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Dashboard
           </Typography>
-          <Button color="inherit">Logout</Button>
+          <Button color="inherit" onClick={routeChange} >Logout</Button>
         </Toolbar>
       </AppBar>
     </Box>
